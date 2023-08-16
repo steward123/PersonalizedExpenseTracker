@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> -->
+
+    <span>Personalized Expense Tracker</span>
+    <button mat-button [routerLink]="'/showData'">Home</button>
+    <button mat-button [matMenuTriggerFor]="menu">Criteria</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="'/datePage'">View Food Expense</button>
+      <button mat-menu-item [routerLink]= "'/calcData'">Calculate Food Expense</button>
+    </mat-menu>
+    <!-- <button mat-button >Criteria</button> -->
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>login</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>face</mat-icon>
+    </button>
+</mat-toolbar>

@@ -1,0 +1,73 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="datasource">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> # </th>
+      <td mat-cell *matCellDef="let item"> {{item.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="every_Date">
+      <th mat-header-cell *matHeaderCellDef> Date </th>
+      <td mat-cell *matCellDef="let item"> {{item.every_Date}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="breakfast">
+      <th mat-header-cell *matHeaderCellDef> Breakfast </th>
+      <td mat-cell *matCellDef="let item"> {{item.breakfast}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tea_flag">
+      <th mat-header-cell *matHeaderCellDef> Tea_Flag </th>
+      <td mat-cell *matCellDef="let item"> {{item.tea_Flag}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tea">
+      <th mat-header-cell *matHeaderCellDef> Tea </th>
+      <td mat-cell *matCellDef="let item"> {{item.tea}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="lunch">
+      <th mat-header-cell *matHeaderCellDef> Lunch </th>
+      <td mat-cell *matCellDef="let item"> {{item.lunch}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dinner">
+      <th mat-header-cell *matHeaderCellDef> Dinner </th>
+      <td mat-cell *matCellDef="let item"> {{item.dinner}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="banana_flag">
+      <th mat-header-cell *matHeaderCellDef> Banana_Flag </th>
+      <td mat-cell *matCellDef="let item"> {{item.banana_flag}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="banana">
+      <th mat-header-cell *matHeaderCellDef> Banana </th>
+      <td mat-cell *matCellDef="let item"> {{item.banana}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="water_Bottle_flag">
+      <th mat-header-cell *matHeaderCellDef> Water_Bottle_Flag </th>
+      <td mat-cell *matCellDef="let item"> {{item.water_Bottle_flag}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="water_Bottle">
+      <th mat-header-cell *matHeaderCellDef> Water_Bottle </th>
+      <td mat-cell *matCellDef="let item"> {{item.water_Bottle}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="remarks">
+      <th mat-header-cell *matHeaderCellDef> Remarks </th>
+      <td mat-cell *matCellDef="let item"> {{item.remarks}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+  showFirstLastButtons
+  aria-label="Select page of  food expenses">
+  </mat-paginator>
+
+</div>
+
+<!-- <router-outlet></router-outlet> -->

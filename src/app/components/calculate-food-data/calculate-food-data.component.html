@@ -1,0 +1,47 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+      <div class="row" style="margin-top: 30px;">
+          <div class="col-md-6 offset-md-3">
+              <form class="text-center" style="margin-top: 70px;" (ngSubmit)="onSubmit()">
+
+              <mat-card>
+                  <mat-card-header>
+                      <mat-card-title>Dates</mat-card-title>
+                      <mat-card-subtitle>Ranges of Date</mat-card-subtitle>
+                  </mat-card-header>
+
+                  <mat-card-actions>
+                      <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>From Date*</mat-label>
+                          <input [(ngModel)]="datesObj.FromDate"
+                          name="fromDate"
+                          matInput placeholder="From Date">
+                          <mat-hint>DD/MM/YYYY</mat-hint>
+                      </mat-form-field>
+
+                      <br/>
+                      <mat-form-field class="full-width" appearance="outline">
+                          <mat-label>To Date*</mat-label>
+                          <input [(ngModel)]="datesObj.ToDate"
+                          name="toDate"
+                          matInput placeholder="To Date">
+                          <mat-hint>DD/MM/YYYY</mat-hint>
+                      </mat-form-field>
+
+                      <br/>
+                      <div class="container">
+                          <button type="submit" mat-raised-button color="primary">Ok</button>
+
+                          <button type="reset" style="margin-left: 20px;" mat-raised-button color="warn">Cancel</button>
+                      </div>
+                  </mat-card-actions>
+
+              </mat-card>
+
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->
